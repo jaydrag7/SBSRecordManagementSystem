@@ -66,8 +66,8 @@ public class ModifyStudentRecUI {
 
 
             Student student = new Student("Chris Doug", "15/01/2019", Sex.MALE,"Mary Doug",
-             "30/07/1964", Sex.FEMALE, "Teacher","876-999-0876", "Kingsway, Bridgeview", 
-             "doug@gmail.com","Francis Doug", "06/04/1955", Sex.MALE, "Mechanic", "876-339-7854", "Kingsway, Bridgeview", 
+             "30/07/1964", Sex.FEMALE, "Teacher","876-999-0876", "Kingsway, Bridgeview",
+             "doug@gmail.com","Francis Doug", "06/04/1955", Sex.MALE, "Mechanic", "876-339-7854", "Kingsway, Bridgeview",
              "francisdoug@gmail.com",2021,"Term 1",grades,illnesses,allergies,permissions,injuries,dName);
 
             student.createExcel();
@@ -100,7 +100,7 @@ public class ModifyStudentRecUI {
 
             HashMap<String,String> permissions2 = new HashMap<>();
             permissions2.put("Panadol","YES");
-            permissions2.put("Emergency Care- First Aid","YES");
+            permissions2.put("Emergency Care - First Aid","YES");
 
             ArrayList<String> injuries2 = new ArrayList<>();
             injuries2.add("");
@@ -108,8 +108,8 @@ public class ModifyStudentRecUI {
             String dName2 = "Dr. Margaret Hamilton";
 
             Student student2 = new Student("Stacy Morgan", "09/11/2020", Sex.FEMALE,"Jean Morgan",
-             "27/09/1990", Sex.FEMALE, "Accountant","876-923-8894", "Swim Lane, Little London", 
-             "morgan@gmail.com","Jermaine Morgan", "09/03/2000", Sex.MALE, "Athlete", 
+             "27/09/1990", Sex.FEMALE, "Accountant","876-923-8894", "Swim Lane, Little London",
+             "morgan@gmail.com","Jermaine Morgan", "09/03/2000", Sex.MALE, "Athlete",
              "876-947-9863", "Swim Lane, Little London", "jermainemorgan@gmail.com",2021,"Term 1",
              grades2,illnesses2,allergies2,permissions2,injuries2,dName2);
 
@@ -146,7 +146,7 @@ public class ModifyStudentRecUI {
                         condition = false;
                     }
                 }
-              
+
 
             }
 
@@ -190,8 +190,8 @@ public class ModifyStudentRecUI {
 
 
             Student student = new Student("Didly Doug", "15/01/2019", Sex.MALE,"Mary Doug",
-             "30/07/1964", Sex.FEMALE, "Teacher","876-999-0876", "Kingsway, Bridgeview", 
-             "doug@gmail.com","", "Francis Doug", Sex.MALE, "Mechanic", "876-339-7854", "Kingsway, Bridgeview", 
+             "30/07/1964", Sex.FEMALE, "Teacher","876-999-0876", "Kingsway, Bridgeview",
+             "doug@gmail.com","", "Francis Doug", Sex.MALE, "Mechanic", "876-339-7854", "Kingsway, Bridgeview",
              "francisdoug@gmail.com",2021,"Term 1",grades,illnesses,allergies,permissions,injuries,dName);
 
 
@@ -199,7 +199,7 @@ public class ModifyStudentRecUI {
             student.regStudent(student);
             student.enterStdGrds(student);
             student.enterMedicalInfo(student);
-            
+
             System.out.print("Please enter your child's ID number:");
             String id =scan.nextLine();
 
@@ -232,13 +232,13 @@ public class ModifyStudentRecUI {
 
                         }
 
-                       
+
                     }
-                
+
                 }
                 else if(option.equals("2")){
-                    
-                    
+
+
                     System.out.println("Please specify what your child is allergic to based on the section (leave blank to state otherwise)\n");
                     System.out.println("Use a comma for separation there are multiple\n");
 
@@ -247,21 +247,21 @@ public class ModifyStudentRecUI {
                     if(vaccineAllergies != ""){
                         student.addNewMedicalInfo(id, "Allergies",vaccineAllergies);
                     }
-                    
+
 
                     System.out.print("\n Food:");
                     String foodAllergies = scan.nextLine();
                     if(foodAllergies != ""){
                         student.addNewMedicalInfo(id, "Allergies",foodAllergies);
                     }
-                    
+
 
                     System.out.print("\n Medicaton(s):");
                     String medicationAllergies = scan.nextLine();
                     if(medicationAllergies != ""){
                         student.addNewMedicalInfo(id, "Allergies",medicationAllergies);
                     }
-                    
+
 
                     System.out.print("\n Others:");
                     String otherAllergies = scan.nextLine();
@@ -269,7 +269,7 @@ public class ModifyStudentRecUI {
                         student.addNewMedicalInfo(id, "Allergies",otherAllergies);
 
                     }
-                    
+
 
                     System.out.println("New allergies to be recorded\n");
 
@@ -304,9 +304,9 @@ public class ModifyStudentRecUI {
                             student.addNewMedicalInfo(id, "Permissions", newPermission);
 
                         }
-                        
+
                     }
-                    
+
 
                 }
                 else if(option.equals("4")){
@@ -321,7 +321,7 @@ public class ModifyStudentRecUI {
                             for(int i = 0; i<injuries_.size();i++){
                                 System.out.println("\n"+injuries_.get(i));
                             }
-                            
+
                         }
                         else{
 
@@ -329,8 +329,8 @@ public class ModifyStudentRecUI {
                             student.addNewMedicalInfo(id, "Injuries", injury);
 
                         }
-                        
-                    
+
+
                     }
 
                 }
@@ -350,13 +350,13 @@ public class ModifyStudentRecUI {
                 }
 
             }
-            
+
 
 
 
 
         }
-        
+
     }
-    
+
 }
