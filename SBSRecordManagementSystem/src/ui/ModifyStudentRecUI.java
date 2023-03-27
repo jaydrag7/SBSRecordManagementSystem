@@ -100,7 +100,7 @@ public class ModifyStudentRecUI {
 
             HashMap<String,String> permissions2 = new HashMap<>();
             permissions2.put("Panadol","YES");
-            permissions2.put("Emergency Care - First Aid","YES");
+            permissions2.put("Emergency Care- First Aid","YES");
 
             ArrayList<String> injuries2 = new ArrayList<>();
             injuries2.add("");

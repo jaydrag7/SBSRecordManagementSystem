@@ -67,5 +67,4 @@ public class ModifyStudentRecContoller {
             System.out.println("Invalid option selected.");
         }
     }
-
 }
