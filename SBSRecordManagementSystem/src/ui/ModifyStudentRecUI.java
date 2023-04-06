@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 import src.users.studentuser.Student;
-import src.controller.ModifyStudentRecContoller;
+import src.controller.ModifyStudentRecController;
 import src.util.Sex;
 
 public class ModifyStudentRecUI {
@@ -139,7 +139,8 @@ public class ModifyStudentRecUI {
                     System.out.print("Please enter the student's ID:");
                     String stdID = scan.nextLine();
 
-                    System.out.println(student.changeStdGrd(stdID, subject, newgrd));
+                    ModifyStudentRecController data = new ModifyStudentRecController();
+                    data.modifyAcademicRecord(stdID, subject, newgrd);
 
                     System.out.println("Any more grades to modify? (Y/N):");
                     String decision = scan.nextLine();
