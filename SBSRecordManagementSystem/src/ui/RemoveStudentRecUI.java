@@ -24,7 +24,7 @@ public class RemoveStudentRecUI {
                 if (response.equals("v")){
                     System.out.println("Please ensure to close the Excel file after viewing.");
                     Thread.sleep(3000);
-                    String excelFilePath = "C:\\Users\\HP\\OneDrive\\Documents\\OneDrive\\Desktop\\Student Information.xlsx";
+                    String excelFilePath = "D:\\UWI\\COMP2171\\Project\\Student Information.xlsx";
                     java.awt.Desktop.getDesktop().open(new File(excelFilePath));
 
                     System.out.print("Would you like to proceed in removing the records (Y/N):");

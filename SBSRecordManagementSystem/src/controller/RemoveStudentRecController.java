@@ -21,7 +21,7 @@ import src.util.Date;
 public class RemoveStudentRecController {
 
     public String removeRecords() throws EncryptedDocumentException, IOException{
-        String excelFilePath = "C:\\Users\\HP\\OneDrive\\Documents\\OneDrive\\Desktop\\Student Information.xlsx";
+        String excelFilePath = "D:\\UWI\\COMP2171\\Project\\Student Information.xlsx";
         FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
         Workbook workbook = WorkbookFactory.create(inputStream);
         Sheet sheet = workbook.getSheetAt(0);
@@ -58,7 +58,7 @@ public class RemoveStudentRecController {
     }
 
     public String sendAlert() throws EncryptedDocumentException, IOException{
-        String excelFilePath = "C:\\Users\\HP\\OneDrive\\Documents\\OneDrive\\Desktop\\Student Information.xlsx";
+        String excelFilePath = "D:\\UWI\\COMP2171\\Project\\Student Information.xlsx";
         FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
         Workbook workbook = WorkbookFactory.create(inputStream);
         Sheet sheet = workbook.getSheetAt(0);
