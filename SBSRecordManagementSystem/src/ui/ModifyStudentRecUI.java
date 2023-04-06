@@ -6,12 +6,13 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 import src.users.studentuser.Student;
+import src.controller.ModifyStudentRecContoller;
 import src.util.Sex;
 
 public class ModifyStudentRecUI {
     private static Scanner scan = new Scanner(System.in);
 
-    private static String medicalMenu(){
+    public static String medicalMenu(){
         String str;
         str= "1. Illnesses"+"\n";
         str+= "2. Allergies"+"\n";
@@ -113,7 +114,7 @@ public class ModifyStudentRecUI {
              "876-947-9863", "Swim Lane, Little London", "jermainemorgan@gmail.com",2021,"Term 1",
              grades2,illnesses2,allergies2,permissions2,injuries2,dName2);
 
-             String excelFilePath = "C:\\Users\\HP\\OneDrive\\Documents\\OneDrive\\Desktop\\Student Information.xlsx";
+             String excelFilePath = "D:\\UWI\\COMP2171\\Project\\Student Information.xlsx";
              if(new File(excelFilePath).exists()){
                 student2.regStudent(student2);
                 student2.enterStdGrds(student2);
