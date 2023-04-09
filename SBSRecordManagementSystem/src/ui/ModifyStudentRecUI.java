@@ -230,7 +230,8 @@ public class ModifyStudentRecUI {
                         else{
 
                             illnesses_.add(newIllness);
-                            student.addNewMedicalInfo(id, "Illnesses",newIllness);
+                            ModifyStudentRecController medicalInfo = new ModifyStudentRecController();
+                            medicalInfo.addNewMedicalInfo(id, "Illnesses",newIllness);
 
                         }
 
@@ -247,28 +248,32 @@ public class ModifyStudentRecUI {
                     System.out.print("\n Vaccine(s):");
                     String vaccineAllergies = scan.nextLine();
                     if(vaccineAllergies != ""){
-                        student.addNewMedicalInfo(id, "Allergies",vaccineAllergies);
+                        ModifyStudentRecController medicalInfo = new ModifyStudentRecController();
+                        medicalInfo.addNewMedicalInfo(id, "Allergies",vaccineAllergies);
                     }
 
 
                     System.out.print("\n Food:");
                     String foodAllergies = scan.nextLine();
                     if(foodAllergies != ""){
-                        student.addNewMedicalInfo(id, "Allergies",foodAllergies);
+                        ModifyStudentRecController medicalInfo = new ModifyStudentRecController();
+                        medicalInfo.addNewMedicalInfo(id, "Allergies",foodAllergies);
                     }
 
 
                     System.out.print("\n Medicaton(s):");
                     String medicationAllergies = scan.nextLine();
                     if(medicationAllergies != ""){
-                        student.addNewMedicalInfo(id, "Allergies",medicationAllergies);
+                        ModifyStudentRecController medicalInfo = new ModifyStudentRecController();
+                        medicalInfo.addNewMedicalInfo(id, "Allergies",medicationAllergies);
                     }
 
 
                     System.out.print("\n Others:");
                     String otherAllergies = scan.nextLine();
                     if(otherAllergies != ""){
-                        student.addNewMedicalInfo(id, "Allergies",otherAllergies);
+                        ModifyStudentRecController medicalInfo = new ModifyStudentRecController();
+                        medicalInfo.addNewMedicalInfo(id, "Allergies",otherAllergies);
 
                     }
 
@@ -303,7 +308,8 @@ public class ModifyStudentRecUI {
                         else{
 
                             permissions_.add(newPermission);
-                            student.addNewMedicalInfo(id, "Permissions", newPermission);
+                            ModifyStudentRecController medicalInfo = new ModifyStudentRecController();
+                            medicalInfo.addNewMedicalInfo(id, "Permissions", newPermission);
 
                         }
 
@@ -328,7 +334,8 @@ public class ModifyStudentRecUI {
                         else{
 
                             injuries_.add(injury);
-                            student.addNewMedicalInfo(id, "Injuries", injury);
+                            ModifyStudentRecController medicalInfo = new ModifyStudentRecController();
+                            medicalInfo.addNewMedicalInfo(id, "Injuries", injury);
 
                         }
 
@@ -340,7 +347,8 @@ public class ModifyStudentRecUI {
                     System.out.println("\nPlease enter the name of child's new doctor:");
                     String newDoc = scan.nextLine();
                     System.out.println("\nNew doctor to be recorded:"+newDoc);
-                    student.addNewMedicalInfo(id, "Doctor", newDoc);
+                    ModifyStudentRecController medicalInfo = new ModifyStudentRecController();
+                    medicalInfo.addNewMedicalInfo(id, "Doctor", newDoc);
 
 
                 }
