@@ -334,7 +334,7 @@ public class Student extends Person {
             }
         }
 
-        filepath = new File("C:\\Users\\HP\\OneDrive\\Documents\\OneDrive\\Desktop\\Student Information.xlsx");
+        filepath = new File("C:\\Users\\Callay Jarrett\\Desktop\\comp2171 excel\\Student Information.xlsx");
         stream = new FileOutputStream(filepath);
         workbook.write(stream);
         stream.close();
@@ -344,7 +344,7 @@ public class Student extends Person {
 
 
     public String regStudent(Student student) throws IOException{
-        String excelFilePath = "C:\\Users\\HP\\OneDrive\\Documents\\OneDrive\\Desktop\\Student Information.xlsx";
+        String excelFilePath = "C:\\Users\\Callay Jarrett\\Desktop\\comp2171 excel\\Student Information.xlsx";
         FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
         Workbook workbook = WorkbookFactory.create(inputStream);
         Sheet sheet = workbook.getSheetAt(0);
@@ -394,7 +394,7 @@ public class Student extends Person {
     }
 
     public String enterStdGrds(Student student) throws EncryptedDocumentException, IOException{
-        String excelFilePath = "C:\\Users\\HP\\OneDrive\\Documents\\OneDrive\\Desktop\\Student Information.xlsx";
+        String excelFilePath = "C:\\Users\\Callay Jarrett\\Desktop\\comp2171 excel\\Student Information.xlsx";
         FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
         Workbook workbook = WorkbookFactory.create(inputStream);
         Sheet sheet = workbook.getSheetAt(6);
@@ -434,7 +434,7 @@ public class Student extends Person {
     }
 
     public String changeStdGrd(String studentID, String subject, String newMark) throws EncryptedDocumentException, IOException{
-        String excelFilePath = "C:\\Users\\HP\\OneDrive\\Documents\\OneDrive\\Desktop\\Student Information.xlsx";
+        String excelFilePath = "C:\\Users\\Callay Jarrett\\Desktop\\comp2171 excel\\Student Information.xlsx";
         FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
         Workbook workbook = WorkbookFactory.create(inputStream);
         Sheet sheet = workbook.getSheetAt(6);
@@ -480,7 +480,7 @@ public class Student extends Person {
     }
 
     public String enterMedicalInfo(Student student) throws EncryptedDocumentException, IOException{
-        String excelFilePath = "C:\\Users\\HP\\OneDrive\\Documents\\OneDrive\\Desktop\\Student Information.xlsx";
+        String excelFilePath = "C:\\Users\\Callay Jarrett\\Desktop\\comp2171 excel\\Student Information.xlsx";
         FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
         Workbook workbook = WorkbookFactory.create(inputStream);
         Sheet sheet = workbook.getSheetAt(7);
@@ -521,7 +521,7 @@ public class Student extends Person {
     }
 
     public String addNewMedicalInfo(String studentID, String infoType, String data) throws EncryptedDocumentException, IOException{
-        String excelFilePath = "C:\\Users\\HP\\OneDrive\\Documents\\OneDrive\\Desktop\\Student Information.xlsx";
+        String excelFilePath = "C:\\Users\\Callay Jarrett\\Desktop\\comp2171 excel\\Student Information.xlsx";
         FileInputStream inputStream = new FileInputStream(new File(excelFilePath));
         Workbook workbook = WorkbookFactory.create(inputStream);
         Sheet sheet = workbook.getSheetAt(7);

@@ -1,0 +1,133 @@
+package src.ui;
+
+import src.users.Parent;
+import src.util.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.concurrent.atomic.AtomicInteger;
+import src.users.studentuser.Student;
+
+public class RegStudentUI {
+
+    private Student student;
+
+
+    public static void main(String[] args) {
+        if((args.length==1) && (args[0].equals("parent"))){
+        RegStudentUI regStudentUI = new RegStudentUI();
+        regStudentUI.CreateStudent();
+
+        public void CreateStudent(){
+            Scanner scanner = new Scanner(System.in);
+        
+                System.out.print("Enter student name: ");
+                String name = scanner.nextLine();
+        
+                System.out.print("Enter student date of birth (dd/mm/yyyy): ");
+                String dob = scanner.nextLine();
+        
+                System.out.print("Enter student sex (MALE/FEMALE): ");
+                String sexStr = scanner.nextLine();
+                Sex sex = Sex.valueOf(sexStr);
+        
+                System.out.print("Enter parent/guardian name: ");
+                String pname = scanner.nextLine();
+        
+                System.out.print("Enter parent/guardian date of birth (dd/mm/yyyy): ");
+                String pdob = scanner.nextLine();
+        
+                System.out.print("Enter parent/guardian sex (M/F): ");
+                String psexStr = scanner.nextLine();
+                Sex psex = Sex.valueOf(psexStr);
+        
+                System.out.print("Enter parent/guardian occupation: ");
+                String poccupation = scanner.nextLine();
+        
+                System.out.print("Enter parent/guardian telephone number: ");
+                String pTel = scanner.nextLine();
+        
+                System.out.print("Enter parent/guardian address: ");
+                String pAddr = scanner.nextLine();
+        
+                System.out.print("Enter parent/guardian email address: ");
+                String pEmail = scanner.nextLine();
+        
+                System.out.print("Enter second parent/guardian name (if applicable): ");
+                String p2name = scanner.nextLine();
+        
+                // Repeat the above steps for the second parent/guardian details if applicable
+        
+                System.out.print("Enter parent2/guardian2 date of birth (dd/mm/yyyy): ");
+                String p2dob = scanner.nextLine();
+        
+                System.out.print("Enter parent2/guardian2 sex (MALE/FEMALE): ");
+                String p2sexStr = scanner.nextLine();
+                Sex p2sex = Sex.valueOf(p2sexStr);
+        
+                System.out.print("Enter parent2/guardian2 occupation: ");
+                String p2_occupation = scanner.nextLine();
+        
+                System.out.print("Enter parent2/guardian2 telephone number: ");
+                String p2Tel = scanner.nextLine();
+        
+                System.out.print("Enter parent2/guardian2 address: ");
+                String p2Addr = scanner.nextLine();
+        
+                System.out.print("Enter parent2/guardian2 email address: ");
+                String p2Email = scanner.nextLine();
+        
+        
+                System.out.print("Enter school year: ");
+                int year = scanner.nextInt();
+        
+                System.out.print("Enter term: ");
+                String term = scanner.nextLine();
+        
+                System.out.print("Enter grades in the format subject:grade,subject:grade,... (e.g. Math:90,Science:85): ");
+                String gradesStr = scanner.nextLine();
+                HashMap<String, Integer> grades = new HashMap<>();
+                String[] gradeTokens = gradesStr.split(",");
+                for (String gradeToken : gradeTokens) {
+                    String[] subjectAndGrade = gradeToken.split(":");
+                    String subject = subjectAndGrade[0];
+                    int grade = Integer.parseInt(subjectAndGrade[1]);
+                    grades.put(subject, grade);
+                }
+        
+                System.out.print("Enter illnesses (separated by commas): ");
+                String illnessesStr = scanner.nextLine();
+                ArrayList<String> illnesses = new ArrayList<>(Arrays.asList(illnessesStr.split(",")));
+        
+                System.out.print("Enter allergies (separated by commas): ");
+                String allergiesStr = scanner.nextLine();
+                ArrayList<String> allergies = new ArrayList<>(Arrays.asList(allergies.split(",")));
+        
+                System.out.print("Enter permissions (separated by commas): ");
+                String permissionsStr = scanner.nextLine();
+                ArrayList<String> permissions = new ArrayList<>(Arrays.asList(permissionsStr.split(",")));
+        
+                System.out.print("Enter illnesses (separated by commas): ");
+                String injuriesStr = scanner.nextLine();
+                ArrayList<String> injuries = new ArrayList<>(Arrays.asList(injuriesStr.split(",")));
+        
+                System.out.print("Enter doctor's name: ");
+                String doctorName = scanner.nextLine();
+        
+                Student student = new Student(name, dob, sex, pname, pdob, psex, poccupation, pTel, pAddr, pEmail,
+                                              p2name, p2dob, p2sex, p2_occupation, p2Tel, p2Addr, p2Email,
+                                              year, term, grades, illnesses, allergies, permissions, injuries, doctorName);
+                regStudent(student);
+        
+                System.out.println("Student created:");
+                System.out.println(student);
+            }
+        }
+    }
+    
+  
+}
+

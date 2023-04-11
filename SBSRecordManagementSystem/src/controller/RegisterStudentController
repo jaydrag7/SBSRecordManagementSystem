@@ -1,0 +1,24 @@
+package src.controller;
+
+import src.ui.RegStudentUI;
+import src.users.studentuser.Student;
+
+public class RegStudentController {
+
+    private RegStudentUI regStudentUI;
+
+    public RegStudentController() {
+        regStudentUI = new RegStudentUI();
+    }
+
+    public void createStudent() {
+        Student student = regStudentUI.createStudent();
+        regStudent(student);
+    }
+
+
+    public static void main(String[] args) {
+        RegStudentController controller = new RegStudentController();
+        controller.createStudent();
+    }
+}
